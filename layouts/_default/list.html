@@ -1,0 +1,28 @@
+{{ partial "header.html" . }}
+
+<div class="flex flex-1 w-full">
+  {{ partial "sidebar.html" . }}
+
+  <section class="flex-1 p-10 font-mono text-green-400">
+    <h1 class="text-2xl mb-6">
+      {{ .Title }}
+    </h1>
+
+  <hr class="border-green-500 mb-6 max-w-3xl">
+
+    <ul class="space-y-3">
+     {{ range .Pages }}
+      <li>
+        <a href="{{ .RelPermalink }}" class="hover:text-green-300">
+          &gt; {{ .Title }}
+        </a>
+        {{ if eq .Section "posts" }}
+      <span class="text-sm opacity-60"> - {{ .Date.Format "Jan 2, 2006" }}</span>
+      {{ end }}
+      </li>
+      {{ end }}
+     </ul>
+  </section>
+</div>
+
+{{ partial "footer.html" . }}

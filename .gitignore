@@ -1,0 +1,26 @@
+# ---> AL
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+.history/
+*.app
+.snapshots/*
+
+# NPM
+.npm
+node_modules/
+
+# Hugo build output
+public/
+resources/
+.hugo_build.lock
+hugo_stats.json
+
+# dotenv
+.env
+.env.*
+!.env.example
