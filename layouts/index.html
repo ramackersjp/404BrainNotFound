@@ -1,0 +1,12 @@
+{{ partial "header.html" . }}
+
+<div class="flex flex-1 w-full">
+  {{ partial "sidebar.html" . }}
+
+ <section class="flex-1 p-10 font-mono text-white">
+  <div class="[&>p]:mb-4 [&>p]:block [&>h1]:mb-4">
+    {{ .Content }}
+  </div>
+</section></div>
+
+{{ partial "footer.html" . }}
