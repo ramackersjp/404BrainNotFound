@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+  {{ partial "css.html" . }}
+</head>
+
+<body class="bg-gradient-to-r from-[#0f172a] to-[#334155] text-green-400 font-mono min-h-screen flex flex-col">
+  {{ partial "nav.html" . }}
+  <main class="flex-1 flex flex-col w-full">
