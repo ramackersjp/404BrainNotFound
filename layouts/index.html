@@ -3,10 +3,17 @@
 <div class="flex flex-1 w-full">
   {{ partial "sidebar.html" . }}
 
- <section class="flex-1 p-10 font-mono text-white">
-  <div class="[&>p]:mb-4 [&>p]:block [&>h1]:mb-4">
-    {{ .Content }}
-  </div>
-</section></div>
+  <section class="flex-1 p-10 font-mono text-white">
+    <div class="max-w-5xl leading-relaxed">
+      <h1 class="text-3xl font-bold text-green-400 mb-6 border-b border-green-400 pb-4">
+        {{ .Title }}
+      </h1>
+
+      <div class="text-gray-200 leading-7">
+        {{ .Content }}
+      </div>
+    </div>
+  </section>
+</div>
 
 {{ partial "footer.html" . }}
