@@ -11,6 +11,15 @@
       <a href="{{ "/contact/" | relURL }}" class="hover:text-white">Contact</a>
     </nav>
 
+  <nav id="mobile-menu" class="hidden flex flex-col space-y-4 p-4 md:hidden text-green-500">
+    <a href="{{ "/" | relURL }}">Home</a>
+    <a href="{{ "/posts/" | relURL }}">Blog</a>
+    <a href="{{ "/about/" | relURL }}">About</a>
+    <a href="{{ "/contact/" | relURL }}">Contact</a>
+  </nav>
+
+  
+
     <div class="md:hidden">
       <button class="text-gray-600 focus:outline-none" type="button" aria-label="Open menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -19,4 +28,13 @@
       </button>
     </div>
   </div>
+
+  <script>
+  const button = document.querySelector('[aria-label="Open menu"]');
+  const menu = document.getElementById('mobile-menu');
+
+  button.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
 </header>
