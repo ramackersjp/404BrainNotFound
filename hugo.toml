@@ -35,9 +35,10 @@ theme = "404BrainNotFound"
     target = 'assets/notwatching/hugo_stats.json'
 
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = false
 
 [pagination]
   disableAliases = false
