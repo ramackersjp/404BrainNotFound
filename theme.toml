@@ -15,3 +15,5 @@ features = ["dark mode"]
   name = "J.P. Ramackers"
   homepage = "https://jpramackers.nl/"
 
+[Version]
+  v = "1.0.0"
