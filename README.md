@@ -24,14 +24,6 @@ This theme uses Tailwind CSS. Before building the site, install Node dependencie
 npm ci
 ```
 
-### 3. Build assets
-
-Build the Tailwind and theme assets:
-
-```bash
-npm run build
-```
-
 ### 4. Build the Hugo site
 
 Generate the static site:
