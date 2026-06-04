@@ -1,7 +1,7 @@
 ---
-title: "My first blogpost!"
+title: "Test blog 5"
 date: 2026-04-30
-headerImage: "/images/my-post/example.jpeg" 
+headerImage: "/images/my-post/blog5.jpg" 
 ---
 
 Under construction!
@@ -25,7 +25,5 @@ Cras rutrum lorem vitae lorem eleifend, vitae condimentum nulla egestas. Fusce v
 Proin pharetra purus justo, eget mollis sem finibus mattis. Aliquam at sem posuere, tempus mi vitae, mollis sapien. Aliquam imperdiet maximus nisi, non semper libero ornare ut. Curabitur fermentum in sem id porttitor. Curabitur lacinia in ante id viverra. Aenean nec lacus a urna ultrices laoreet sed ut odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum nec neque quis nisi fermentum pharetra. Nam maximus efficitur neque sed malesuada.
 
 Praesent mauris ligula, tristique non egestas vitae, pharetra sit amet nisl. Ut aliquam dolor sodales, condimentum diam ut, auctor nibh. Aenean dignissim lacus in quam ullamcorper, vel mollis ligula eleifend. Integer neque justo, tempor ullamcorper magna at, interdum ornare felis. Quisque efficitur, leo at dignissim consectetur, dolor est malesuada elit, nec lobortis nisl nisi vitae ipsum. Quisque ut libero convallis, porttitor mauris id, ornare odio. In non elementum magna.
-
-
 
 

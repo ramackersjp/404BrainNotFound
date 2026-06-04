@@ -38,3 +38,8 @@ theme = "404BrainNotFound"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[pagination]
+  disableAliases = false
+  pagerSize = 5
+  path = 'page'

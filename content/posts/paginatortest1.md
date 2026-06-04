@@ -1,7 +1,7 @@
 ---
-title: "My first blogpost!"
+title: "Test blog 1!"
 date: 2026-04-30
-headerImage: "/images/my-post/example.jpeg" 
+headerImage: "/images/my-post/blog1.jpg" 
 ---
 
 Under construction!
