@@ -1,9 +1,36 @@
   </main>
 
+  <button
+  id="scrollToTop"
+  class="fixed bottom-6 right-6 hidden rounded-lg bg-green-600 px-4 py-3 font-mono text-black shadow-lg transition hover:bg-green-500">
+  Top
+</button>
+
+
+
   <footer class="w-full border-t border-green-500 bg-slate-950 font-mono">
     <div class="px-6 py-4 text-sm">
       © {{ now.Year }} J.P. Ramackers
     </div>
   </footer>
+
+  <script>
+  const button = document.getElementById("scrollToTop");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      button.classList.remove("hidden");
+    } else {
+      button.classList.add("hidden");
+    }
+  });
+
+  button.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
 </body>
 </html>
