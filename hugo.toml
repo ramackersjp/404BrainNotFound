@@ -47,3 +47,6 @@ theme = "404BrainNotFound"
   disableAliases = false
   pagerSize = 5
   path = 'page'
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
