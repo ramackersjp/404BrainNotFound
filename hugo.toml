@@ -48,5 +48,8 @@ theme = "404BrainNotFound"
   pagerSize = 5
   path = 'page'
 
+[markup.goldmark.renderer]
+  unsafe = true
+
 [outputs]
 home = ["HTML", "RSS", "JSON"]
