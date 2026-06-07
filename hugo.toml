@@ -2,6 +2,9 @@ baseURL = "https://jpramackers.nl"
 title = "J.P. Ramackers"
 theme = "404BrainNotFound"
 
+[params]
+  pwa = true 
+
 [menu]
   [[menu.main]]
     identifier = "posts"

@@ -35,5 +35,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+{{ if .Site.Params.pwa }}
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js');
+  }
+</script>
+{{ end }}
+
+
 </body>
 </html>

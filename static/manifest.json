@@ -1,0 +1,14 @@
+{
+  "name": "J.P. Ramackers",
+  "short_name": "Blog",
+  "description": "Simpel blog, built with Hugo themes",
+  "icons": [
+    { "src": "images/pwa/pwa-logo-1.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "images/pwa/pwa-logo-2.png", "type": "image/png", "sizes": "512x512" }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1793d1",
+  "theme_color": "#1793d1"
+}
