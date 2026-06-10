@@ -17,3 +17,9 @@ features = ["dark mode"]
 
 [Version]
   v = "1.1.0"
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.150.0"
+    max = ""
