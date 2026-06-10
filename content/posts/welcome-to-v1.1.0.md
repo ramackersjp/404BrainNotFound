@@ -10,8 +10,6 @@ imageAlt = ""
 
 ## Welcome
 
-{{< figure src="/images/my-post/post-1.jpg" title="Title" >}}
-
 Finally! We are now on version 1.1.0. I made a lot of changes for this version of the website. The following changes were made: the hamburger menu was not working properly, implementation of a bottom-to-top scroller, added a search function, and the sidebar will disappear on smaller devices for a better reading experience.
 
 I'm happy with the results, and I can start using my blog now for what it's made for.
