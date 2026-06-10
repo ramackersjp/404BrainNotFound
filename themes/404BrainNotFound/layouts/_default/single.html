@@ -4,24 +4,67 @@
   {{ partial "sidebar.html" . }}
 
   <section class="flex-1 p-10 font-mono text-green-400">
-    <article class="max-w-3xl">
-      <h1 class="text-3xl font-bold mb-4">
-        {{ .Title }}
-      </h1>
+    <div class="flex gap-10">
 
-      {{ if not .Params.hideDate }}
+      <article class="flex-1 max-w-3xl">
+        <h1 class="text-3xl font-bold mb-4">
+          {{ .Title }}
+        </h1>
+
+        {{ if eq .Section "posts" }}
         <p class="text-sm mb-6 opacity-60">
-      {{ .Date.Format "Jan 2, 2006" }}
-      </p>
+          {{ .Date.Format "Jan 2, 2006" }}
+        </p>
+        {{ end }}
+
+        <hr class="border-green-500 mb-6">
+
+        <div class="prose prose-invert max-w-none prose-headings:text-green-400 prose-a:text-green-300">
+          {{ .Content }}
+
+          {{ if eq .Section "posts" }}
+          <nav class="post-nav mt-12 flex justify-between">
+            {{ with .PrevInSection }}
+            <div class="prev">
+              <a href="{{ .RelPermalink }}">
+                ← Previous: {{ .LinkTitle }}
+              </a>
+            </div>
+            {{ end }}
+
+            {{ with .NextInSection }}
+            <div class="next ml-auto">
+              <a href="{{ .RelPermalink }}">
+                Next: {{ .LinkTitle }} →
+              </a>
+            </div>
+            {{ end }}
+          </nav>
+          {{ end }}
+        </div>
+      </article>
+
+      {{ if and (eq .Section "posts") .TableOfContents }}
+      <aside class="hidden xl:block w-64 shrink-0">
+        <div class="sticky top-52 max-h-[calc(100vh-6rem)] overflow-auto border border-green-800 rounded-lg p-4 bg-black/20">
+
+          <h2 class="font-bold text-green-300 mb-4">
+            Contents
+          </h2>
+
+          <div class="toc text-sm
+                      [&_ul]:ml-4
+                      [&_ul]:space-y-2
+                      [&_a]:text-green-400
+                      [&_a:hover]:text-green-200">
+            {{ .TableOfContents }}
+          </div>
+
+        </div>
+      </aside>
       {{ end }}
 
-
-      <hr class="border-green-500 mb-6">
-
-      <div class="prose prose-invert max-w-none prose-headings:text-green-400 prose-a:text-green-300">
-        {{ .Content }}
-      </div>
-    </article>
+    </div>
   </section>
 </div>
 

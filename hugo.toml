@@ -2,6 +2,9 @@ baseURL = "https://jpramackers.nl"
 title = "J.P. Ramackers"
 theme = "404BrainNotFound"
 
+[params]
+  pwa = true 
+
 [menu]
   [[menu.main]]
     identifier = "posts"
@@ -35,6 +38,18 @@ theme = "404BrainNotFound"
     target = 'assets/notwatching/hugo_stats.json'
 
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = false
+
+[pagination]
+  disableAliases = false
+  pagerSize = 5
+  path = 'page'
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]

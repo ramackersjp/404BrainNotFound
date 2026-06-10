@@ -1,0 +1,19 @@
+# 404BrainNotFound theme for Hugo
+
+name = "404BrainNotFound"
+license = "MIT"
+licenselink = "https://github.com/ramackersjp/404BrainNotFound"
+description = "A simple/stylish blog"
+
+homepage = "https://github.com/ramackersjp/404BrainNotFound"
+demosite = "https://blog.jpramackres.nl"
+
+tags = ["blog", "minimal", "responsive", "dark mode", "dark", "tailwind", "personal"]
+features = ["dark mode"]
+
+[author]
+  name = "J.P. Ramackers"
+  homepage = "https://jpramackers.nl/"
+
+[Version]
+  v = "1.1.0"
