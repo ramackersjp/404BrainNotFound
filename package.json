@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "dev": "hugo --source exampleSite server",
+    "build": "hugo --source exampleSite",
+    "build:prod": "hugo --source exampleSite --minify"
+  },
   "devDependencies": {
     "@tailwindcss/cli": "^4.2.2",
     "@tailwindcss/typography": "^0.5.19",

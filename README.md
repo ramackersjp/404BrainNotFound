@@ -1,16 +1,26 @@
-# BrainNotFound
+# 404BrainNotFound
 
 ![Banner](preview.png)
 
-My personal theme made with Hugo.
+A minimal, dark, personal Hugo theme with Tailwind CSS.
 
-## Installation
+## Requirements
 
-This theme is designed to be used as a Hugo theme placed inside the `themes` directory.
+- Hugo (extended) **v0.150.0+**
+- Node.js (for Tailwind CSS)
+
+## Quick Start (example site)
+
+```bash
+npm ci
+npm run dev
+```
+
+Open http://localhost:1313 in your browser. The example site will build and hot-reload as you edit.
+
+## Using the theme in your own project
 
 ### 1. Add the theme
-
-Clone the repository into your Hugo project’s `themes` folder:
 
 ```bash
 git clone https://github.com/ramackersjp/404BrainNotFound themes/404BrainNotFound
@@ -18,34 +28,48 @@ git clone https://github.com/ramackersjp/404BrainNotFound themes/404BrainNotFoun
 
 ### 2. Install dependencies
 
-This theme uses Tailwind CSS. Before building the site, install Node dependencies:
-
 ```bash
 npm ci
 ```
 
-### 4. Build the Hugo site
+### 3. Configure your site
 
-Generate the static site:
-
-```bash
-hugo build
-```
-
-### 5. Run the development server
-
-Start the local development server:
-
-```bash
-hugo server
-```
-
-## Configuration
-
-Make sure your Hugo configuration references the theme:
+Set the theme in your `hugo.toml`:
 
 ```toml
 theme = "404BrainNotFound"
 ```
 
-Node.js is required for building assets. Hugo must be installed and available in your system PATH.
+### 4. Build
+
+```bash
+npm run build      # production build (outputs to public/)
+npm run dev        # development server with live reload
+```
+
+> **Note:** Using `npm run` ensures the Tailwind CSS binary is found automatically. If you run `hugo` directly, make sure `tailwindcss` is on your PATH or run from a directory that contains `node_modules/.bin/`.
+
+## Repository structure
+
+```
+├── archetypes/      # Content archetypes (used when running `hugo new`)
+├── assets/          # Theme assets (Tailwind CSS input, etc.)
+├── layouts/         # Hugo templates
+├── static/          # Static files (images, JS, PWA assets)
+├── exampleSite/     # Demo site — clone this to get started
+│   ├── content/
+│   └── hugo.toml
+├── theme.toml       # Theme metadata
+└── package.json     # Node dependencies and scripts
+```
+
+To run or modify the example site locally, use `--source exampleSite`:
+
+```bash
+npm run dev          # runs: hugo --source exampleSite server
+npm run build        # runs: hugo --source exampleSite
+```
+
+## License
+
+MIT
