@@ -2,13 +2,13 @@
 title: "Contact"
 ---
 
-<div style="display:flex; align-items:center; gap:20px; margin:20px 0; flex-wrap:wrap;">
+<div class="flex items-center gap-5 my-5 flex-wrap">
   <svg width="48" height="48" viewBox="0 0 24 24" fill="#e53935"
        xmlns="http://www.w3.org/2000/svg"
-       style="flex-shrink:0;">
+       class="shrink-0">
     <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
   </svg>
-  <h1 style="margin:0;">J.P. Ramackers</h1>
+  <h1 class="m-0">J.P. Ramackers</h1>
 </div> 
 
 Feel free to get in touch if you have questions, suggestions, bug reports, or feature requests.
@@ -17,7 +17,7 @@ Feel free to get in touch if you have questions, suggestions, bug reports, or fe
 [jramackers@proton.me](mailto:jramackers@proton.me)
 
 **Source Code:**
-<a href="https://github.com/ramackersjp/404BrainNotFound" target="_blank">https://github.com/ramackersjp/404BrainNotFound</a>
+<https://github.com/ramackersjp/404BrainNotFound>
 
 ## Contributions Welcome
 
