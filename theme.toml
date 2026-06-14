@@ -6,7 +6,7 @@ licenselink = "https://github.com/ramackersjp/404BrainNotFound"
 description = "A simple/stylish blog"
 
 homepage = "https://github.com/ramackersjp/404BrainNotFound"
-demosite = "https://blog.jpramackres.nl"
+demosite = "https://blog.jpramackers.nl"
 
 tags = ["blog", "minimal", "responsive", "dark mode", "dark", "tailwind", "personal"]
 features = ["dark mode"]
