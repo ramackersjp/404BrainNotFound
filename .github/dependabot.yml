@@ -1,0 +1,16 @@
+version: 2
+
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+    # Groepeer alle npm-updates in één PR
+    groups:
+      npm-dependencies:
+        patterns:
+          - "*"
+
+    labels:
+      - "dependencies"
