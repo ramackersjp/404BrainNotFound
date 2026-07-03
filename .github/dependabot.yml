@@ -6,7 +6,7 @@ updates:
     schedule:
       interval: "weekly"
 
-    # Groepeer alle npm-updates in één PR
+    # Group all npm updates into one PR
     groups:
       npm-dependencies:
         patterns:
