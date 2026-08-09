@@ -16,7 +16,7 @@ features = ["dark mode"]
   homepage = "https://jpramackers.nl/"
 
 [Version]
-  v = "1.1.4"
+  v = "2.0.0"
 
 [module]
   [module.hugoVersion]
