@@ -8,26 +8,9 @@ const input = document.getElementById("search-input");
 const results = document.getElementById("search-results");
 
 let fuse;
+let pendingQuery = "";
 
-fetch("/index.json")
-  .then(response => {
-    if (!response.ok) throw new Error("Failed to load index.json");
-    return response.json();
-  })
-  .then(data => {
-
-    fuse = new Fuse(data, {
-      keys: ["title", "content", "summary"],
-      includeScore: true,
-      threshold: 0.4
-    });
-
-  })
-  .catch(err => console.error("Search index failed to load:", err));
-
-input.addEventListener("input", function () {
-
-  const query = this.value;
+function runSearch(query) {
 
   if (!query.length) {
     results.innerHTML = "";
@@ -58,4 +41,41 @@ input.addEventListener("input", function () {
     </article>
   `).join("");
 
+}
+
+fetch("/index.json")
+  .then(response => {
+    if (!response.ok) throw new Error("Failed to load index.json");
+    return response.json();
+  })
+  .then(data => {
+
+    fuse = new Fuse(data, {
+      keys: ["title", "content", "summary"],
+      includeScore: true,
+      threshold: 0.4,
+      ignoreLocation: true
+    });
+
+    if (pendingQuery) {
+      runSearch(pendingQuery);
+      pendingQuery = "";
+    }
+
+  })
+  .catch(err => console.error("Search index failed to load:", err));
+
+input.addEventListener("input", function () {
+  runSearch(this.value);
 });
+
+const urlParams = new URLSearchParams(window.location.search);
+const urlQuery = urlParams.get("q");
+if (urlQuery) {
+  input.value = urlQuery;
+  if (fuse) {
+    runSearch(urlQuery);
+  } else {
+    pendingQuery = urlQuery;
+  }
+}
