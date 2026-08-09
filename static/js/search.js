@@ -53,7 +53,8 @@ fetch("/index.json")
     fuse = new Fuse(data, {
       keys: ["title", "content", "summary"],
       includeScore: true,
-      threshold: 0.4
+      threshold: 0.4,
+      ignoreLocation: true
     });
 
     if (pendingQuery) {
